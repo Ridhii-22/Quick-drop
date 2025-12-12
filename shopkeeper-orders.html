@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickDrop — Shopkeeper Orders</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        .order-card {
+            border-left: 5px solid transparent; 
+            padding-left: 15px;
+        }
+        .new-order-alert {
+            border-left-color: #E53E3E; /* Red border for new alerts */
+        }
+    </style>
+</head>
+<body>
+    <div class="app-screen shopkeeper-orders">
+        
+        <header class="desktop-navbar" style="background-color: var(--color-primary);">
+            <div class="logo" style="font-size: 26px; font-weight: 800; color: white;">QuickDrop Vendor Portal</div>
+            <nav class="desktop-nav-links">
+                <a href="shopkeeper-orders.html" class="active" style="color: var(--color-accent); border-bottom-color: var(--color-accent);">📦 Orders</a>
+                <a href="shopkeeper-inventory.html" style="color: white;">📋 Inventory</a>
+                <a href="#" style="color: white;">📈 Analytics</a>
+                <a href="resident-home.html" style="margin-left: 20px; color: white;">🏠 Resident View</a>
+            </nav>
+            <div class="comm-icon-desktop" style="background-color: var(--color-accent);">📞 Call Runner</div>
+        </header>
+
+        <div class="app-main">
+
+            <div class="header-bar" style="background-color: var(--color-primary);">
+                 <a href="resident-home.html" class="icon" style="font-size: 24px; color: white;">🏠</a> 
+                <h2 class="nav-title" style="color: white; margin: 0;">Order Management</h2>
+                <div class="icon-group">
+                    <a href="#" class="comm-icon" style="background-color: var(--color-accent);">📞</a>
+                    <a href="user-profile.html" class="comm-icon" style="background-color: var(--color-accent);">👤</a>
+                </div>
+            </div>
+
+            <nav class="mobile-primary-nav">
+                <a href="shopkeeper-orders.html" class="active">Orders</a>
+                <a href="shopkeeper-inventory.html">Inventory</a>
+                <a href="#">Analytics</a>
+                <a href="user-profile.html">Profile</a>
+            </nav>
+
+            <div class="app-content">
+                <h1 style="font-size: 28px; font-weight: 800; margin-bottom: 20px; color: var(--color-primary);">Manage Incoming Orders</h1>
+                
+                <div class="tab-nav" style="display: flex; gap: 20px; border-bottom: 1px solid #E2E8F0; margin-bottom: 20px;">
+                    <button class="tab-item active" style="padding: 10px 0; background: none; border: none; font-weight: 600;">New (2)</button>
+                    <button class="tab-item" style="padding: 10px 0; background: none; border: none; font-weight: 600;">Preparing (1)</button>
+                    <button class="tab-item" style="padding: 10px 0; background: none; border: none; font-weight: 600;">Ready (4)</button>
+                </div>
+                
+                <div class="orders-list">
+                    <div class="order-card card new-order-alert">
+                        <div class="order-header">
+                            <h3>Order #QD901</h3>
+                            <span class="time-stamp">2 mins ago</span>
+                        </div>
+                        <p class="order-details">Apt 1204 - Priya S. | Total: $14.50</p>
+                        <ul style="list-style: none; padding-left: 0; margin-bottom: 15px; font-size: 14px;">
+                            <li style="font-weight: 600;">5 Items (Tap for details)</li>
+                        </ul>
+                        <div class="action-buttons">
+                            <button class="btn-primary" style="background-color: #E53E3E; margin-right: 10px;">Reject</button>
+                            <button class="btn-primary">Accept & Start Prep</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="sidebar">
+            <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 20px; color: var(--color-primary);">Today's Operational Summary</h3>
+            <div class="card" style="padding: 20px; margin-bottom: 15px;">
+                <p style="font-size: 14px; color: var(--color-text-subtle);">New Orders Pending</p>
+                <p style="font-size: 32px; font-weight: 800; color: #E53E3E;">2</p>
+            </div>
+            <div class="card" style="padding: 20px;">
+                <p style="font-size: 14px; color: var(--color-text-subtle);">Est. Revenue</p>
+                <p style="font-size: 32px; font-weight: 800; color: var(--color-primary);">$345.50</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

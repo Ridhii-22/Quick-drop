@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickDrop — User Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="app-screen user-profile">
+
+        <header class="desktop-navbar">
+            <div class="logo" style="font-size: 26px; font-weight: 800; color: white;">QuickDrop</div>
+            <nav class="desktop-nav-links">
+                <a href="resident-home.html">🏠 Discover</a>
+                <a href="resident-checkout.html">🛒 Checkout</a> 
+                <a href="resident-orders.html">⏱️ Orders</a>
+                <a href="shopkeeper-orders.html">📦 Vendor Portal</a>
+            </nav>
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <div class="comm-icon-desktop">📞 Contact Support</div> 
+                <a href="user-profile.html" class="active" style="color: white; font-weight: 600; text-decoration: none; border-bottom: 2px solid var(--color-accent);">👤 Profile</a>
+            </div>
+        </header>
+
+        <div class="app-main">
+            
+            <div class="header-bar">
+                <a href="resident-home.html" class="icon" style="font-size: 24px;">&larr;</a> 
+                <h2 class="nav-title" style="margin: 0;">My Profile</h2>
+                <div class="icon-group">
+                    <a href="#" class="comm-icon">📞</a>
+                    <a href="user-profile.html" class="comm-icon" style="background-color: var(--color-accent);">👤</a>
+                </div>
+            </div>
+
+            <nav class="mobile-primary-nav">
+                <a href="resident-home.html">Home</a>
+                <a href="resident-checkout.html">Cart</a>
+                <a href="resident-orders.html">Orders</a>
+                <a href="user-profile.html" class="active">Profile</a>
+            </nav>
+
+            <div class="app-content">
+                <h1 style="font-size: 28px; font-weight: 800; margin-bottom: 30px; color: var(--color-primary);">Account Settings</h1>
+                
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <div style="width: 80px; height: 80px; background-color: var(--color-accent); border-radius: 50%; display: inline-flex; justify-content: center; align-items: center; font-size: 40px; color: white;">P</div>
+                    <h3 style="margin-top: 10px;">Priya Sharma</h3>
+                    <p style="color: var(--color-text-subtle);">Resident - Apt 1204</p>
+                </div>
+
+                <h3 class="section-heading">Contact Information</h3>
+                <div class="card">
+                    <p style="font-weight: 600; margin-bottom: 5px;">Email: priya@example.com</p>
+                    <p style="font-weight: 600;">Phone: +91 98765 43210</p>
+                </div>
+                
+                <h3 class="section-heading">Saved Addresses</h3>
+                <div class="card">
+                    <p style="font-weight: 600; margin-bottom: 5px;">Home: The Summit Towers, Apt 1204</p>
+                    <button class="btn-secondary" style="margin-top: 10px;">Edit Addresses</button>
+                </div>
+                
+                <div style="margin-top: 40px;">
+                    <button class="btn-primary" style="background-color: #E53E3E;">Logout</button>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="sidebar">
+             <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 20px;">Quick Actions</h3>
+             <div class="card" style="padding: 20px;">
+                <p style="font-weight: 600; margin-bottom: 10px;">Security & Privacy</p>
+                <p style="font-weight: 600; margin-bottom: 10px;">Payment Methods</p>
+                <p style="font-weight: 600;">Switch to Vendor View</p>
+             </div>
+        </div>
+    </div>
+</body>
+</html>

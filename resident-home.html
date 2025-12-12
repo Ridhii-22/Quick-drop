@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickDrop — Resident Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="app-screen resident-home">
+        
+        <header class="desktop-navbar">
+            <div class="logo" style="font-size: 26px; font-weight: 800; color: white;">QuickDrop</div>
+            <nav class="desktop-nav-links">
+                <a href="resident-home.html" class="active">🏠 Discover</a>
+                <a href="resident-checkout.html">🛒 Checkout</a> 
+                <a href="resident-orders.html">⏱️ Orders</a>
+                <a href="shopkeeper-orders.html">📦 Vendor Portal</a>
+            </nav>
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <div class="comm-icon-desktop">📞 Contact Shop</div>
+                <a href="user-profile.html" style="color: white; font-weight: 600; text-decoration: none;">👤 Profile</a>
+            </div>
+        </header>
+
+        <div class="app-main">
+            
+            <div class="header-bar">
+                <div>
+                    <div style="font-size: 14px; color: var(--color-accent);">Delivering to:</div>
+                    <div style="font-weight: 700; font-size: 18px;">The Summit Towers</div>
+                </div>
+                <div class="icon-group">
+                    <a href="#" class="comm-icon">📞</a>
+                    <a href="user-profile.html" class="comm-icon" style="background-color: var(--color-accent);">👤</a> 
+                </div>
+            </div>
+
+            <nav class="mobile-primary-nav">
+                <a href="resident-home.html" class="active">Home</a>
+                <a href="resident-checkout.html">Cart</a>
+                <a href="resident-orders.html">Orders</a>
+                <a href="shopkeeper-orders.html">Vendor</a>
+            </nav>
+
+            <div class="app-content">
+                <h1 style="font-size: 28px; font-weight: 800; margin-bottom: 20px; color: var(--color-primary);">Find What You Need, Instantly</h1>
+                
+                <input type="search" placeholder="Search items or shops..." class="search-input">
+                
+                <h2 style="margin-top: 25px;">Browse Categories</h2>
+                <div class="category-grid">
+                    <div class="category-item">🥖 Bakery</div>
+                    <div class="category-item">🥛 Dairy</div>
+                    <div class="category-item">💊 Health</div>
+                    <div class="category-item">🧺 Home</div>
+                    <div class="category-item">🍎 Produce</div>
+                    <div class="category-item">🍺 Drinks</div>
+                </div>
+
+                <h2 style="margin-top: 30px;">Local Shops</h2>
+                
+                <div class="shop-card card">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <h3 style="font-size: 20px; font-weight: 700; color: var(--color-primary);">Corner Mart 🛒</h3>
+                            <p style="color: var(--color-text-subtle); margin-top: 5px;">Groceries, Snacks, Quick Fixes</p>
+                        </div>
+                        <div style="text-align: right;">
+                            <span class="delivery-time" style="margin-bottom: 5px; display: block;">15 min delivery</span>
+                            <div style="font-size: 14px; font-weight: 600; color: #F6AD55;">⭐ 4.8</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="sidebar">
+            <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 20px;">Your Cart (3 Items)</h3>
+            <div class="card" style="padding: 15px; margin-bottom: 15px; border: 1px solid var(--color-accent); background-color: var(--color-light-accent);">
+                <div style="display: flex; justify-content: space-between; font-size: 15px; margin-bottom: 5px;">
+                    <span>2x Milk</span><span style="font-weight: 600;">$5.00</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-size: 15px; margin-bottom: 5px;">
+                    <span>1x Bread</span><span style="font-weight: 600;">$3.50</span>
+                </div>
+                <hr style="margin: 10px 0; border-color: #fff;">
+                <div style="display: flex; justify-content: space-between; font-size: 18px; font-weight: 700; color: var(--color-primary);">
+                    <span>Total</span><span>$12.50</span>
+                </div>
+            </div>
+            <a href="resident-checkout.html" class="btn-primary" style="width: 100%;">Proceed to Checkout</a>
+        </div>
+        
+    </div>
+</body>
+</html>

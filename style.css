@@ -1,0 +1,440 @@
+/* --- GLOBAL RESET & VARIABLES (Professional Palette) --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --color-primary: #1A202C;      /* Dark Charcoal/Blue for headers */
+    --color-accent: #00B8A9;       /* Soft Teal for actions */
+    --color-light-accent: #E6FFFA; /* Very light teal background */
+    --color-background: #FFFFFF;
+    --color-section: #F4F6F8;      /* Lightest Grey for section breaks */
+    --color-text-dark: #2D3748;    /* Dark Text */
+    --color-text-subtle: #718096;  /* Subdued Grey Text */
+    --radius-sm: 8px;
+    --radius-lg: 16px;
+    --shadow-deep: 0 10px 20px rgba(26, 32, 44, 0.08); /* Professional Shadow */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-section);
+    line-height: 1.4;
+    color: var(--color-text-dark);
+}
+
+/* --- APP FRAME & MOBILE DEFAULTS --- */
+.app-screen {
+    max-width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-content {
+    flex-grow: 1;
+    padding: 20px;
+    padding-top: 80px; /* Space for sticky header */
+}
+
+/* --- STICKY HEADER (Mobile & Shared) --- */
+.header-bar {
+    padding: 15px 20px;
+    background-color: var(--color-background);
+    border-bottom: 1px solid #E2E8F0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Changed to fixed for stronger adherence */
+    top: 0;
+    width: 100%;
+    max-width: inherit; /* Inherit width from parent on mobile */
+    z-index: 100;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+}
+
+/* --- TYPOGRAPHY & BUTTONS --- */
+h2 {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: var(--color-primary);
+}
+
+.section-heading {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 25px 0 10px;
+    color: var(--color-text-dark);
+}
+
+.btn-primary {
+    background-color: var(--color-accent);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: var(--radius-lg);
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: #00998c;
+    transform: translateY(-1px);
+}
+
+/* --- IN-APP COMMUNICATION FEATURE --- */
+.comm-icon {
+    background-color: var(--color-primary);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.comm-icon:hover {
+    transform: scale(1.05);
+}
+
+/* --- CARDS & COMPONENTS --- */
+.card {
+    background-color: var(--color-background);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-deep);
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    transition: border 0.3s;
+}
+.card:hover {
+    border-color: var(--color-light-accent);
+}
+
+/* ------------------------------------- */
+/* --- RESIDENT HOME STYLES --- */
+/* ------------------------------------- */
+.search-input {
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: var(--radius-lg);
+    border: 1px solid #CBD5E0;
+    background-color: var(--color-section);
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 items wide on mobile */
+    gap: 15px;
+    text-align: center;
+}
+
+.category-item {
+    background-color: var(--color-background);
+    padding: 15px 10px;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* --- BOTTOM NAV (Mobile Only) --- */
+.bottom-nav {
+    position: fixed; /* Fixed for app-like persistence */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color: var(--color-background);
+    border-top: 1px solid #E2E8F0;
+    z-index: 10;
+}
+/* ... (Bottom nav item styles remain) ... */
+
+/* ------------------------------------- */
+/* --- SHOPKEEPER ORDERS STYLES --- */
+/* ------------------------------------- */
+.order-card {
+    position: relative;
+    border-left: 5px solid transparent; 
+    padding-left: 15px;
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.time-stamp {
+    font-size: 14px;
+    color: var(--color-accent);
+    font-weight: 600;
+    background-color: var(--color-light-accent);
+    padding: 3px 8px;
+    border-radius: var(--radius-sm);
+}
+
+/* ------------------------------------- */
+/* --- MEDIA QUERIES FOR LAPTOP/DESKTOP (Wider View) --- */
+/* ------------------------------------- */
+
+/* --- (PREVIOUS GLOBAL STYLES ARE UNCHANGED) --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --color-primary: #1A202C;
+    --color-accent: #00B8A9;
+    --color-light-accent: #E6FFFA;
+    --color-background: #FFFFFF;
+    --color-section: #F4F6F8;
+    --color-text-dark: #2D3748;
+    --color-text-subtle: #718096;
+    --radius-sm: 8px;
+    --radius-lg: 16px;
+    --shadow-deep: 0 10px 20px rgba(26, 32, 44, 0.08);
+}
+/* ... (Other global styles remain unchanged) ... */
+
+/* --- APP FRAME & MOBILE DEFAULTS --- */
+.app-screen {
+    max-width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+/* ... (Header, Buttons, Cards, Mobile Nav styles are unchanged) ... */
+
+/* ------------------------------------- */
+/* --- MEDIA QUERIES FOR LAPTOP/DESKTOP (Wider View) --- */
+/* ------------------------------------- */
+
+/* --- GLOBAL RESET & VARIABLES (UNCHANGED) --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --color-primary: #1A202C;
+    --color-accent: #00B8A9;
+    --color-light-accent: #E6FFFA;
+    --color-background: #FFFFFF;
+    --color-section: #F4F6F8;
+    --color-text-dark: #2D3748;
+    --color-text-subtle: #718096;
+    --radius-sm: 8px;
+    --radius-lg: 16px;
+    --shadow-deep: 0 10px 20px rgba(26, 32, 44, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-section);
+    line-height: 1.4;
+    color: var(--color-text-dark);
+}
+
+/* --- APP FRAME & MOBILE DEFAULTS --- */
+.app-screen {
+    max-width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Increased padding to accommodate the taller, unified mobile header */
+.app-content {
+    flex-grow: 1;
+    padding: 20px;
+    padding-top: 100px; /* Space for the new taller unified sticky header */
+}
+
+/* --- UNIFIED STICKY HEADER (MOBILE) --- */
+.header-bar {
+    background-color: var(--color-background);
+    border-bottom: 1px solid #E2E8F0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: inherit;
+    z-index: 100;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+}
+
+.header-top {
+    /* Container for Logo/Back button and Call/Profile icons */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.mobile-nav-links {
+    /* Container for Home/Cart/Orders/Vendor links */
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #E2E8F0;
+    padding: 10px 0;
+}
+
+.mobile-nav-links a {
+    text-decoration: none;
+    color: var(--color-text-subtle);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.mobile-nav-links a.active {
+    color: var(--color-accent);
+}
+
+/* --- CARDS & COMPONENTS (UNCHANGED) --- */
+/* ... (Buttons, Cards, Search Input, etc., styles remain) ... */
+
+/* --- MOBILE BOTTOM NAV REMOVED --- */
+.bottom-nav {
+    display: none !important;
+}
+
+/* ------------------------------------- */
+/* --- MEDIA QUERIES FOR LAPTOP/DESKTOP (Wider View) --- */
+/* ------------------------------------- */
+
+/* --- (UNCHANGED GLOBAL STYLES) --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --color-primary: #1A202C;
+    --color-accent: #00B8A9;
+    --color-light-accent: #E6FFFA;
+    --color-background: #FFFFFF;
+    --color-section: #F4F6F8;
+    --color-text-dark: #2D3748;
+    --color-text-subtle: #718096;
+    --radius-sm: 8px;
+    --radius-lg: 16px;
+    --shadow-deep: 0 10px 20px rgba(26, 32, 44, 0.08);
+}
+/* ... (Other global styles remain unchanged) ... */
+
+/* --- APP FRAME & MOBILE DEFAULTS --- */
+.app-screen {
+    max-width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Reduced padding top back to a clean size for a single header row */
+.app-content {
+    flex-grow: 1;
+    padding: 20px;
+    padding-top: 60px; /* Space for the new single-row sticky header */
+}
+
+/* --- CLEAN, SINGLE-ROW STICKY HEADER (MOBILE) --- */
+.header-bar {
+    /* Uses one row for all essential elements */
+    background-color: var(--color-background);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Clean padding */
+    border-bottom: 1px solid #E2E8F0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: inherit;
+    z-index: 100;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+}
+
+/* The primary navigation links are now condensed into the header bar or placed in a menu if too many */
+/* Since you only have 4 links, we will put the most critical ones in the header on mobile. */
+/* Removing .header-top and .mobile-nav-links structure */
+.header-bar .nav-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.header-bar .icon-group {
+    display: flex;
+    gap: 10px;
+}
+
+/* --- DEDICATED MOBILE NAVIGATION (New approach to keep it top-based) --- */
+/* We will use a separate navigation bar right below the main header for primary links. 
+   This separates main app functions from primary navigation, keeping the header clean. */
+.mobile-primary-nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 8px 0;
+    background-color: var(--color-background);
+    border-bottom: 1px solid #E2E8F0;
+    position: fixed;
+    top: 50px; /* Position right below the header-bar */
+    width: 100%;
+    z-index: 90;
+    font-size: 14px;
+}
+
+.mobile-primary-nav a {
+    text-decoration: none;
+    color: var(--color-text-subtle);
+    font-weight: 600;
+    padding: 5px 10px;
+}
+
+.mobile-primary-nav a.active {
+    color: var(--color-accent);
+    border-bottom: 2px solid var(--color-accent);
+}
+
+/* Adjust app-content padding to account for the new two-part mobile header (Header Bar + Nav Bar) */
+@media (max-width: 799px) {
+    .app-content {
+        padding-top: 100px; /* Header Bar (50px) + Nav Bar (50px) approx */
+    }
+}
+
+/* --- DESKTOP STYLES (UNCHANGED) --- */
+@media (min-width: 800px) {
+    /* ... (Desktop styles remain unchanged) ... */
+    
+    /* Ensure mobile specific elements are hidden */
+    .mobile-primary-nav {
+        display: none !important;
+    }
+}
